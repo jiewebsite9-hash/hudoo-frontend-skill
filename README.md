@@ -24,19 +24,29 @@
 
 ## 安装
 
-克隆到 Claude Code 的全局 skills 目录：
+克隆到 Claude Code 的全局 skills 目录即可，无需 GitHub 账号。
+
+macOS / Linux：
 
 ```bash
-git clone git@github.com:jiewebsite9-hash/hudoo-frontend-skill.git ~/.claude/skills/hudoo-frontend
+git clone https://github.com/jiewebsite9-hash/hudoo-frontend-skill.git ~/.claude/skills/hudoo-frontend
 ```
 
-Windows（Git Bash）：
+Windows（Git Bash / PowerShell 均可）：
 
 ```bash
-git clone git@github.com:jiewebsite9-hash/hudoo-frontend-skill.git "$USERPROFILE/.claude/skills/hudoo-frontend"
+git clone https://github.com/jiewebsite9-hash/hudoo-frontend-skill.git "$USERPROFILE/.claude/skills/hudoo-frontend"
 ```
 
-目录名必须是 `hudoo-frontend`（与 `SKILL.md` 的 `name` 字段一致）。装好后新开会话，Claude Code 会自动加载。
+没装 git 的话，点仓库页右上角 **Code → Download ZIP**，解压后把里面的文件放进 `~/.claude/skills/hudoo-frontend/`（即该目录下直接是 `SKILL.md` 和 `references/`，不要多套一层文件夹）。
+
+**目录名必须是 `hudoo-frontend`**，要和 `SKILL.md` 里的 `name` 字段一致，否则不会被识别。装好后新开一个会话，Claude Code 会自动加载。
+
+更新到最新版：
+
+```bash
+cd ~/.claude/skills/hudoo-frontend && git pull
+```
 
 ## 触发时机
 
